@@ -1,0 +1,26 @@
+package com.mode.trino.honeycomb;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class HoneycombTeam {
+    private final String slug;
+
+    @JsonCreator
+    public HoneycombTeam(@JsonProperty("slug") String slug) {
+        this.slug = slug;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    @Override
+    public String toString() {
+        return "HoneycombTeam{" +
+            "slug='" + slug + '\'' +
+            '}';
+    }
+}

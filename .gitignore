@@ -1,0 +1,10 @@
+# Maven artifacts
+target/
+dependency-reduced-pom.xml
+
+# IntelliJ artifacts
+.idea/
+*.iml
+
+# Local Trino server
+trino-server-*/
